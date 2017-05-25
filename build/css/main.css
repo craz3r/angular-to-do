@@ -1,0 +1,112 @@
+body {
+  background-color: #D2D8D0;
+  font-family: 'Open Sans Condensed', sans-serif; }
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+  overflow: hidden; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.task {
+  background-color: #002920; }
+  .task-control {
+    float: left;
+    width: 40%;
+    padding: 10px; }
+    .task-control h1 {
+      color: #fff;
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-left: 20%; }
+    .task-control input,
+    .task-control textarea {
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      width: 70%;
+      border: none;
+      outline: none;
+      font-size: 18px; }
+  .task-post {
+    margin-left: 25%; }
+  .task-list {
+    float: right;
+    width: 55%;
+    padding: 50px 10px;
+    overflow-y: scroll;
+    height: 500px;
+    overflow-x: hidden; }
+  .task-item {
+    color: #000;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #D2D8D0;
+    margin-bottom: 15px;
+    overflow: hidden; }
+    .task-item h2 {
+      margin: 0; }
+  .task-mainInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    margin: 0;
+    padding: 0;
+    line-height: 0.5em; }
+  .task-name {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
+  .task-info {
+    margin: 0; }
+
+.btn {
+  background-color: #464682;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in; }
+  .btn-done {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #013162; }
+
+.showAll {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  color: #00f;
+  text-decoration: underline; }
+
+.visible-add, .visible-remove {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+
+.visible,
+.visible-add.visible-add-active {
+  height: 0;
+  margin: 0;
+  padding: 0; }

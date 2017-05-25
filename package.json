@@ -1,0 +1,27 @@
+{
+  "name": "tasklist",
+  "version": "1.0.0",
+  "description": "angular tasklist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Sigow",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.8.1",
+    "gulp-autoprefixer": "*",
+    "gulp-inject": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "*",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "*",
+    "gulp-watch": "*"
+  },
+  "devDependencies": {
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass-lint": "^1.2.0"
+  }
+}

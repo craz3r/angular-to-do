@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="taskList">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Task List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=cyrillic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <section class="task clearfix" ng-controller="taskListCtrl">
+        <div class="task-control">
+          <h1>Список дел:</h1>
+          <form class="task-form" action="index.html" method="post"><br/>
+            <input type="text" name="task-title" value="" required placeholder="Что нужно сделать" ng-model="title"><br/>
+            <textarea name="task-descr" class="task-descr" rows="8" cols="80" placeholder="Подробности?" ng-model="descr"></textarea><br/>
+            <button name="task-post" class="task-post btn" ng-click="addTask()">Добавить</button>
+          </form>
+        </div>
+        <div class="task-list">
+            <div class="task-item" ng-class="cl" ng-repeat="task in tasks">
+              <div class="task-mainInfo">
+                <h2 class="task-name">{{task.title}}</h2>
+                <p>{{task.date | date : 'medium'}}</p>
+              </div>
+              <div ng-show="!task.fullView" class="task-info">
+                <p>{{task.short}}<button ng-click="task.fullView = !task.fullView" class="showAll">Показать все</button></p>
+              </div>
+              <div ng-show="task.fullView" class="task-info">
+                <p>{{task.descr}}</p>
+              </div>
+              <button ng-click="cl = 'visible'; delete(task)" class="btn btn-done">Done</button>
+            </div>
+        </div>
+      </section>
+    </div>
+  <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
